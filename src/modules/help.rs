@@ -1,23 +1,10 @@
-#[path = "../exec_utils.rs"]
-mod exec_utils;
-use exec_utils::get_exec_name;
-
 use colored::Colorize;
 use std::{env::args, process::exit};
 use term_grid::{Cell, Grid, GridOptions};
 
-fn help_default() {
-    println!(
-        "Usage: {} {}",
-        get_exec_name().green().bold(),
-        "help <module>".magenta().bold()
-    );
-
-    println!(
-        "Available modules: {}",
-        vec!["help", "path", "user"].join(", ").magenta().bold()
-    );
-}
+#[path = "../exec_utils.rs"]
+mod exec_utils;
+use exec_utils::get_exec_name;
 
 fn help_help() {
     let mut output_grid = Grid::new(GridOptions {
@@ -95,11 +82,9 @@ pub fn show_help() {
     args.remove(0);
 
     if args.len() == 0 {
-        help_default();
+        println!("[{}] No arguments.", "ERROR".red().bold());
         exit(0);
     }
-
-    args.remove(0);
 
     let command = args.pop().unwrap();
 
@@ -107,6 +92,6 @@ pub fn show_help() {
         "h" | "help" => help_help(),
         "p" | "path" => help_path(),
         "u" | "user" => help_user(),
-        _ => help_default(),
+        _ => {}
     }
 }
