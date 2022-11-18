@@ -1,0 +1,13 @@
+[package]
+name = "pun"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+colored = "2.0.0"
+dict = "0.1.5"
+itertools = "0.10.5"
+sysinfo = "0.26.7"
+term_grid = "0.2.0"
