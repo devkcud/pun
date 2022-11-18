@@ -30,7 +30,7 @@ What will happen (by default):
 
 Clone this repo using Git.
 ```sh
-$ git clone <url>
+$ git clone https://gitlab.com/devkcud/pun.git
 $ cd ./pun/
 ```
 
