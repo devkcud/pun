@@ -52,10 +52,10 @@ pub fn path_module() {
 
 pub fn user_module() {
     show_description("Show user information.");
-    show_usage("user", vec!["[nug-]"]);
+    show_usage("user", vec!["[nugs]"]);
     show_extra(
         "Examples",
-        vec!["-", "ng", "nu-"],
+        vec!["", "s", "ng", "nus"],
         &format!("\n  {} {} {} ",
             "$".magenta().bold(),
             get_executable_name().green(),

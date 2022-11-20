@@ -1,5 +1,4 @@
 use colored::Colorize;
-use itertools::Itertools;
 use std::{env, process::exit};
 
 mod modules;
@@ -24,26 +23,17 @@ fn main() {
             let mut features: Vec<&str> = vec![];
             let mut use_headers = true;
 
-            if args.len() != 0 {
-                args.join("")
-                    .chars()
-                    .collect::<Vec<char>>()
-                    .iter()
-                    .for_each(|c| match c {
-                        'n' => features.push("NAME"),
-                        'u' => features.push("UID"),
-                        'g' => features.push("GROUPS"),
-                        '-' => use_headers = false,
-                        _ => (),
-                    });
-            }
+            if args.join("").contains(&"s") { use_headers = false; }
+            if args.join("").contains(&"n") { features.push("NAME"); }
+            if args.join("").contains(&"u") { features.push("UID"); }
+            if args.join("").contains(&"g") { features.push("GROUPS") }
 
             user::show_user_info(features, use_headers);
         }
         "p" | "path" => {
             let mut simplify = false;
             
-            args.join("").chars().contains(&'s').then(|| simplify = true);
+            args.join("").contains(&"s").then(|| simplify = true);
 
             path::show_path(simplify);
         },
