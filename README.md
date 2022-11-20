@@ -39,7 +39,7 @@ cd ./pun/
 Now, supposing you are on the cloned directory and have rust installed, you can run using (debug mode):
 
 ```sh
-cargo run -q -- {PROGRAM ARGS}
+cargo run -q -- help
 ```
 
 To compile:
