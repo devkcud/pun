@@ -62,4 +62,4 @@ cargo build --release
 
 ## License
 
-This project uses [Unlicensed license](./LICENSE).
+This project uses [The Unlicense license](./LICENSE).
