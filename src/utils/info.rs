@@ -38,7 +38,16 @@ pub fn help_module() {
 
 pub fn path_module() {
     show_description("Shows the $PATH variable in a human-readable way.");
-    show_usage("path", vec![]);
+    show_usage("path", vec!["[s]"]);
+    show_extra(
+        "Examples",
+        vec!["", "s"],
+        &format!("\n  {} {} {} ",
+            "$".magenta().bold(),
+            get_executable_name().green(),
+            "path".red(),
+        )[..]
+    );
 }
 
 pub fn user_module() {

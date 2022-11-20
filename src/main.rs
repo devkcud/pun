@@ -1,4 +1,5 @@
 use colored::Colorize;
+use itertools::Itertools;
 use std::{env, process::exit};
 
 mod modules;
@@ -39,7 +40,13 @@ fn main() {
 
             user::show_user_info(features, use_headers);
         }
-        "p" | "path" => path::show_path(),
+        "p" | "path" => {
+            let mut simplify = false;
+            
+            args.join("").chars().contains(&'s').then(|| simplify = true);
+
+            path::show_path(simplify);
+        },
         _ => println!("[{}] Invalid command {}", "ERROR".red(), command.yellow()),
     }
 }
