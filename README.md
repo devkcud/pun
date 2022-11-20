@@ -2,7 +2,7 @@
 
 ## About
 
-Originally known as Pugnix, PUN is a command-line tool for GNU/Linux. _Tested only on ArchLinux_.
+Originally known as Pugnix, PUN is a command-line tool for GNU/Linux that shows useful information about the system. _Tested only on ArchLinux_.
 
 > Created with the purpose of learning [Rust](https://www.rust-lang.org/).
 
