@@ -2,7 +2,7 @@
 
 ## About
 
-Originally known as Pugnix, PUN is a command-line tool for GNU/Linux. _Tested only on ArchLinux_.  
+Originally known as Pugnix, PUN is a command-line tool for GNU/Linux. _Tested only on ArchLinux_.
 
 > Created with the purpose of learning [Rust](https://www.rust-lang.org/).
 
@@ -14,7 +14,7 @@ Originally known as Pugnix, PUN is a command-line tool for GNU/Linux. _Tested on
 - [Git](https://git-scm.com/);
 - [Rust](https://www.rust-lang.org/).
 
-### From script (Automatic) (WIP)
+### From script (Automatic)
 
 **IMPORTANT:** Before running _any_ install/build script from the internet, you _should_ read and understand what it will do to your computer. [View script](build.sh)
 
@@ -29,22 +29,23 @@ What will happen (by default):
 ### From source (Manual)
 
 Clone this repo using Git.
+
 ```sh
-$ git clone https://gitlab.com/devkcud/pun.git
-$ cd ./pun/
+git clone https://gitlab.com/devkcud/pun.git
+cd ./pun/
 ```
 
 Now, supposing you are on the cloned directory and have rust installed, you can run using (debug mode):
 
 ```sh
-$ cargo run -q -- {PROGRAM ARGS}
+cargo run -q -- {PROGRAM ARGS}
 ```
 
 To compile:
 
 ```sh
-$ cargo build --release
-$ ./target/release/pun help
+cargo build --release
+./target/release/pun help
 ```
 
 ## Updating script
