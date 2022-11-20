@@ -28,8 +28,6 @@ What will happen (by default):
 - Compile source with cargo (Rust utility);
 - Send the binary file to _/usr/local/bin/_ folder.
 
-#### Running
-
 ```sh
 curl https://gitlab.com/devkcud/pun/-/raw/main/build.sh -o build.sh
 chmod +x ./build.sh
