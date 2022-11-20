@@ -22,8 +22,9 @@ I recommend you to read and modify the build script to your needs.
 
 What will happen (by default):
 
-- **The script will clone the repo**.
-- Compile source with cargo (Rust utility).
+- **The script will clone the repo**;
+- Create/delete a temporary folder at _/tmp/_;
+- Compile source with cargo (Rust utility);
 - Send the binary file to _/usr/local/bin/_ folder.
 
 ### From source (Manual)
