@@ -11,6 +11,7 @@ Originally known as Pugnix, PUN is a command-line tool for GNU/Linux. _Tested on
 ### Dependencies
 
 - [Sudo](https://www.sudo.ws/sudo/) or administrator access. ([Build script](#from-script-automatic));
+- [curl](https://curl.se/) to download files from terminal;
 - [Git](https://git-scm.com/);
 - [Rust](https://www.rust-lang.org/).
 
@@ -26,6 +27,14 @@ What will happen (by default):
 - Create/delete a temporary folder at _/tmp/_;
 - Compile source with cargo (Rust utility);
 - Send the binary file to _/usr/local/bin/_ folder.
+
+#### Running
+
+```sh
+curl https://gitlab.com/devkcud/pun/-/raw/main/build.sh -o build.sh
+chmod +x ./build.sh
+./build.sh
+```
 
 ### From source (Manual)
 
@@ -51,7 +60,7 @@ cargo build --release
 
 ## Updating script
 
-> WIP
+> WIP, for now, just use the build script.
 
 ## License
 
