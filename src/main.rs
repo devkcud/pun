@@ -26,7 +26,7 @@ fn main() {
             if args.join("").contains(&"s") { use_headers = false; }
             if args.join("").contains(&"n") { features.push("NAME"); }
             if args.join("").contains(&"u") { features.push("UID"); }
-            if args.join("").contains(&"g") { features.push("GROUPS") }
+            if args.join("").contains(&"g") { features.push("GROUPS"); }
 
             user::show_user_info(features, use_headers);
         }
