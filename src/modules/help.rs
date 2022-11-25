@@ -9,6 +9,7 @@ pub fn show_help() {
         "h" | "help" => info::help_module(),
         "p" | "path" => info::path_module(),
         "u" | "user" => info::user_module(),
+        "c" | "comp" | "components" => info::components_module(),
         _ => {}
     }
 }

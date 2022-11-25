@@ -16,7 +16,7 @@ fn show_usage(module_name: &str, args: Vec<&str>) {
 }
 
 fn show_extra(extra_title: &str, msg: Vec<&str>, sep: &str) {
-    println!("{}: {}",
+    println!("{}:{}",
         extra_title,
         sep.to_string() + &msg.join(sep).red().to_string()[..],
     );
@@ -27,13 +27,14 @@ pub fn help_module() {
     show_usage("help", vec!["<module>"]);
     show_extra(
         "Examples",
-        vec!["", "path", "user", "p", "u"],
+        vec!["", "components", "user", "path"],
         &format!("\n  {} {} {} ",
             "$".magenta().bold(),
             get_executable_name().green(),
             "help".red(),
         )[..]
     );
+    show_extra("Aliases", vec!["h", "help"], " ");
 }
 
 pub fn path_module() {
@@ -48,6 +49,7 @@ pub fn path_module() {
             "path".red(),
         )[..]
     );
+    show_extra("Aliases", vec!["p", "path"], " ");
 }
 
 pub fn user_module() {
@@ -62,4 +64,11 @@ pub fn user_module() {
             "user".red(),
         )[..]
     );
+}
+
+pub fn components_module() {
+    show_description("Show components temperature.");
+    show_usage("components", vec![]);
+    show_extra("Examples", vec![""], "");
+    show_extra("Aliases", vec!["c", "comp", "components"], " ");
 }

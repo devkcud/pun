@@ -2,7 +2,7 @@ use colored::Colorize;
 use std::{env, process::exit};
 
 mod modules;
-use modules::{help, path, user};
+use modules::{help, path, user, components::show_components_info};
 
 fn main() {
     if !cfg!(target_os = "linux") {
@@ -37,6 +37,9 @@ fn main() {
 
             path::show_path(simplify);
         },
+        "c" | "comp" | "components" => {
+            show_components_info();
+        }
         _ => println!("[{}] Invalid command {}", "ERROR".red(), command.yellow()),
     }
 }
