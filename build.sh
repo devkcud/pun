@@ -1,6 +1,6 @@
 #!/bin/bash
 
-REPO_URL="https://gitlab.com/devkcud/pun.git"
+REPO_URL="https://github.com/devkcud/pun.git"
 TEMP_FOLDER="/tmp/pun/"
 BINARY_FOLDER="/usr/local/bin"
 
