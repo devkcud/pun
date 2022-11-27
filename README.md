@@ -17,6 +17,7 @@ Originally known as Pugnix, PUN is a command-line tool for GNU/Linux that shows 
 
 ### From script (Automatic)
 
+**IMPORTANT:** This is script is only compatible with linux.  
 **IMPORTANT:** Before running _any_ install/build script from the internet, you _should_ read and understand what it will do to your computer. [View script](build.sh)
 
 I recommend you to read and modify the build script to your needs.
