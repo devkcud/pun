@@ -13,7 +13,7 @@ Originally known as Pugnix, PUN is a command-line tool for GNU/Linux that shows 
 - [Sudo](https://www.sudo.ws/sudo/) or administrator access. ([Build script](#from-script-automatic));
 - [curl](https://curl.se/) to download files from terminal;
 - [Git](https://git-scm.com/);
-- [Rust](https://www.rust-lang.org/).
+- [Rust](https://www.rust-lang.org/) v1.65
 
 ### From script (Automatic)
 
